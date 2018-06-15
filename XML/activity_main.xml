@@ -1,150 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="43dp"
-    android:id="@+id/gradient"
-    android:background="@drawable/gradient_three"
+    android:id="@+id/drawerLayout"
+android:background="@drawable/balance"
     android:baselineAligned="false"
-    android:paddingHorizontal="35dp"
     tools:context=".MainActivity">
 
-    /* CONTAINING ALL ELEMENTS */
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/the_frame">
+
+/* column 1 */
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <Button
+            android:id="@+id/reflect_1"
+            android:layout_width="124dp"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:elevation="3dp"
+            android:padding="7dp"
+            android:text="Reflect"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:background="#40000000"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-condensed"/>
 
+        <Button
+            android:id="@+id/relax_1"
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:layout_margin="5dp"
+            android:elevation="3dp"
+            android:padding="7dp"
+            android:text="Relax"
+            android:textAllCaps="false"
+            android:textColor=" #ffffff "
+            android:textSize="18sp"
+            android:background="#40000000"
+            android:fontFamily="sans-serif-condensed" />
 
-  /*black image */
+        <Button
+            android:id="@+id/concentrate_1"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_margin="5dp"
+            android:background="#40000000"
+            android:elevation="3dp"
+            android:padding="7dp"
+            android:text="Concentrate"
+            android:textAllCaps="false"
+            android:textColor="#ffffff "
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-condensed" />
+    </LinearLayout>
+
+    /* column 2 */
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_gravity="right"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="150dp"
+        <Button
+            android:id="@+id/relieve_1"
+            android:layout_width="224dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:background="#40000000"
+            android:elevation="3dp"
+            android:padding="7dp"
+            android:text="Relieve"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-condensed" />
+
+        <Button
+            android:id="@+id/awaken_1"
+            android:layout_width="221dp"
+            android:layout_height="224dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:background="#40000000"
+            android:elevation="3dp"
+            android:padding="10dp"
+            android:text="Awaken"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-condensed"
+
+            />
+    </LinearLayout>
+
+        /* reset and pause button */
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/pose"/>
+            android:layout_gravity="bottom|center"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/pause"
 
-
-    /* buttons and reset */
-    <LinearLayout
-android:layout_width="140dp"
-android:layout_height="wrap_content"
-android:layout_gravity="center_horizontal"
-android:orientation="vertical"
-android:layout_weight="1"
-android:layout_alignParentRight="true">
-
-
-
-<Button
-    android:id="@+id/rest"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:padding="7dp"
-    android:text="Rest"
-    android:background="#AB8EE3 "
-    android:layout_gravity="center_horizontal"
-    android:layout_marginTop="7dp"
-    app:fontFamily="sans-serif"
-    android:textSize="16sp"
-    android:elevation="7dp"
-    android:textColor="#5B4471  "
-    android:layout_marginBottom="12dp"
-    android:textAllCaps="false"/>
-
-<Button
-    android:id="@+id/reflect"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="7dp"
-    android:layout_marginBottom="12dp"
-    android:text="Reflect"
-    android:elevation="7dp"
-    android:layout_marginTop="7dp"
-    app:fontFamily="sans-serif"
-    android:textSize="16sp"
-    android:textColor="#5B4471  "
-    android:background="#AB8EE3 "
-    android:layout_gravity="center_horizontal"
-    android:textAllCaps="false"/>
-
-<Button
-    android:id="@+id/emmerse"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="7dp"
-    android:layout_marginBottom="12dp"
-    android:text="Immerse"
-    android:elevation="5dp"
-    android:layout_marginTop="7dp"
-    android:background="#AB8EE3  "
-    app:fontFamily="sans-serif"
-    android:textSize="16sp"
-    android:textColor="#5B4471  "
-    android:layout_gravity="center_horizontal"
-    android:textAllCaps="false"/>
-
-<Button
-    android:id="@+id/awaken"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="10dp"
-    android:text="Awaken"
-    android:elevation="7dp"
-    android:layout_marginBottom="12dp"
-    android:layout_marginTop="7dp"
-    app:fontFamily="sans-serif"
-    android:textSize="16sp"
-        android:textColor="#5B4471"
-    android:background="#AB8EE3 "
-    android:layout_gravity="center_horizontal"
-    android:textAllCaps="false"
-
-    />
-
-        /* reset button */
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <Button
-        android:id="@+id/pause"
-
-        android:layout_width="45dp"
-        android:layout_height="35dp"
-    android:background="#5B4471"
-        android:text="||"
-        android:fontFamily="sans-serif-condensed"
-        android:textColor="#AB8EE3"
-        android:textSize="12dp"
-        android:elevation="7dp"
-        android:layout_marginTop="127dp"
-        android:layout_marginLeft="20dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+               android:layout_margin="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="||"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:textSize="10dp" />
 
 
-    <Button
-        android:id="@+id/reset"
-        android:layout_width="45dp"
-        android:layout_height="35dp"
-        android:background="#5B4471"
-        android:text="Reset"
-        android:elevation="7dp"
-        android:fontFamily="sans-serif-condensed"
-        android:textColor="#AB8EE3"
-        android:textSize="11dp"
-        android:layout_marginTop="127dp"
-        android:layout_marginLeft="15dp"/>
-</LinearLayout>
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="5dp"
+                android:fontFamily="sans-serif"
+                android:text="Reset"
+                android:textAllCaps="false"
+                android:layout_weight="3"
+                android:textColor="#ffffff"
+                android:textSize="9dp" />
+        </LinearLayout>
 
-</LinearLayout>
+    </FrameLayout>
 
-    </LinearLayout>
-    </RelativeLayout>
+    /* slide-out nav bar*/
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/nav_menu"
+        android:id="@+id/menu_reference"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
+    
+    
