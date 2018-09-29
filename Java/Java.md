@@ -1,1 +1,1 @@
-This file contants Java code for MindMomnt app.
+This file contains Java code for MindMomnt app.
